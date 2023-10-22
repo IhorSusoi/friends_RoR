@@ -22,4 +22,4 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  url: <%= ENV['DATABASE_URL'] %> # ENTER THIS *EXACTLY* AS THIS, THIS READS THE VALUE OF THE DATABASE_URL environment variable programatically
